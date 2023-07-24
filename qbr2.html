@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function getCookie(name) {
+        var match = document.cookie.match(
+          RegExp("(?:^|;\\s*)" + name + "=([^;]*)")
+        );
+        return match ? match[1] : null;
+      }
+
+      window.onload = function setPassword() {
+        const hasStoredPassword = getCookie("QBR2");
+
+        if (hasStoredPassword) {
+          console.log("found cookie");
+          document.querySelector("input").value = hasStoredPassword;
+          document.querySelector("button[type='submit']").click();
+        }
+      };
+
+      function onSubmit() {
+        console.log("Submitted");
+      }
+    </script>
+  </head>
+
+  <body>
+    Hello there
+
+    <input />
+    <button type="submit" onclick="onSubmit()">Submit</button>
+  </body>
+</html>

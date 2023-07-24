@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    // This script will be attached to QBR Q1-Q2 2023, and on click we will set shot-time live cookies for the prevs QBRS
+
+    function setCookie(qbr, password) {
+        // set cookie just for 10sec to be safe
+        document.cookie = "QBR2=passwordForQBR2; max-age=10; path=/;";
+        console.log('Cookie has been added');
+    }
+
+</script>
+
+<body>
+    <input />
+    <button type="submit" onclick="setCookie('QBR2', 'asdasdasd')" >Submit</button>
+</body>
+</html>
